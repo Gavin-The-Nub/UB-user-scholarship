@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact Us</title>
+    <script
+      src="https://kit.fontawesome.com/76fefd33c4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="contact.css" />
+
+    <link rel="stylesheet" href="footer.css" />
+    <style>
+      * {
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      a {
+        font-family: "Open Sans", Arial, sans-serif;
+        padding: 15px 20px;
+      }
+
+      header {
+        display: flex;
+        height: 100px;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-color: transparent;
+        z-index: 1;
+      }
+      .nav-list {
+        display: flex;
+        flex: 1;
+      }
+      .left {
+        display: flex;
+        flex: 1;
+        margin-left: 40px;
+      }
+      .logo img {
+        height: 80px;
+        border-radius: 40px;
+      }
+
+      .middle {
+        display: flex;
+        flex: 1;
+      }
+      .middle li {
+        margin-right: 12px;
+      }
+      .middle li a {
+      }
+      .right {
+        display: flex;
+        flex: 1;
+      }
+      .right li {
+        flex: 1;
+        text-align: right;
+        margin-right: 12px;
+        flex-wrap: wrap;
+        color: #752738;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.15em;
+        display: inline-block;
+        padding: 15px 20px;
+        position: relative;
+        font-weight: 600;
+      }
+      .right a {
+        position: relative;
+      }
+      .cancel {
+        color: rgb(204, 204, 204);
+        font-weight: 700;
+        padding: 7px;
+      }
+      .cancel:hover {
+        color: rgb(255, 255, 255);
+      }
+
+      .right:hover .logout {
+        display: block;
+      }
+      .right button {
+        position: absolute;
+        top: 5px;
+        right: 0;
+        display: none;
+        background: gray;
+        text-transform: capitalize;
+        color: #fff;
+      }
+
+      /*this css is for the design and hover effect of the header's nav*/
+      ul {
+        margin: 150px auto 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        text-align: center;
+      }
+      li {
+        display: table-cell;
+        position: relative;
+        padding: 15px 0;
+      }
+      .right a {
+        color: #752738;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.15em;
+        display: inline-block;
+        padding: 15px 20px;
+        position: relative;
+        font-weight: 600;
+      }
+      .right a:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background-color: #752738;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+      .right a:hover:after {
+        width: 100%;
+        left: 0;
+      }
+      ul li a {
+        color: #752738;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.15em;
+        display: inline-block;
+        padding: 15px 20px;
+        position: relative;
+        font-weight: 600;
+      }
+      ul li a:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background-color: #752738;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+      ul li a:hover:after {
+        width: 100%;
+        left: 0;
+      }
+      @media screen and (max-height: 300px) {
+        ul {
+          margin-top: 40px;
+        }
+      }
+      /*end of headers css*/
+
+      footer {
+        display: flex;
+        background-color: black;
+        position: relative;
+        top: 100px;
+        left: 0;
+        right: 0;
+        height: 290px;
+        column-gap: 1em;
+      }
+
+      .footerLeft {
+        flex: 1;
+        display: grid;
+        margin-left: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .footerLeft up {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .footerLeft down h5 {
+        display: flex;
+        align-items: flex-end;
+        color: rgb(187, 180, 180);
+        align-items: center;
+        text-align: center;
+        font-size: 10px;
+      }
+      .footerMid a {
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.15em;
+        display: inline-block;
+        padding: 15px 20px;
+        position: relative;
+      }
+      .footerMid a:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: #fff;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+      .footerMid a:hover:after {
+        left: 0;
+        width: 100%;
+      }
+      down a {
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.15em;
+        display: inline-block;
+        padding: 15px 20px;
+        position: relative;
+      }
+      down a:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: #fff;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+      down a:hover:after {
+        left: 0;
+        width: 100%;
+      }
+      .footerTitle {
+        color: white;
+        justify-content: flex-start;
+        padding-top: 20px;
+      }
+      .footerDescr {
+        color: rgb(187, 180, 180);
+        width: 400px;
+        text-align: left;
+        font-size: 10px;
+      }
+      .footerRight {
+        flex: 1;
+      }
+      .footerRight up {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        padding-top: 30px;
+      }
+      .footerRight down {
+        display: flex;
+        margin-right: 10px;
+        align-items: center;
+        justify-content: center;
+      }
+      .footerMid h5 a {
+        font-size: 10px;
+        color: rgb(187, 180, 180);
+      }
+
+      .footerRight h3 a {
+        color: rgb(187, 180, 180);
+      }
+      .footerRight h5 {
+        color: rgb(187, 180, 180);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <header>
+    <div class="left">
+      <div class="logo"><img src="./photos/download.png" /></div>
+    </div>
+    <div class="middle">
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="scholarship.html">Scholarship</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="right">
+      <li><a href="logIn.html">Login</a></li>
+    </div>
+  </header>
+  <body>
+    <div class="line">.</div>
+    <div class="head"><h1>CONTACT US</h1></div>
+    <div class="container">
+      <div class="leftt">
+        <div class="aa">
+          <h2>UB Batangas Campus</h2>
+          <h5>Phone: +63 43 723-1446 local 217</h5>
+          <h5>0919 825 7879</h5>
+          <h5>
+            email:<a href="mailto:amyrose.septimo@ub.edu.ph"
+              >amyrose.septimo@ub.edu.ph</a
+            >
+          </h5>
+        </div>
+        <div>
+          <h2>UB Lipa Campus</h2>
+          <h5>Phone: +63 43 723-1446 local 817</h5>
+          <h5></h5>
+          <h5>
+            email:<a href="mailto:jennifer.pasahol@ub.edu.ph"
+              >jennifer.pasahol@ub.edu.ph</a
+            >
+          </h5>
+          <div class="office">
+            <h2>Office Hours:</h2>
+            <h5>Monday to Friday: 8:00am – 5:00pm</h5>
+            <h5>Saturday: 8:00am – 12:00nn</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="line2">.</div>
+
+    <div class="bb">
+      <h2>SOCIAL MEDIA</h2>
+      <div>
+        <a
+          class="cc"
+          target="_blank"
+          href="https://web.facebook.com/ubatangas?_rdc=1&_rdr"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a target="_blank" href="https://twitter.com/ubatangas"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+        <a
+          target="_blank"
+          v
+          href="https://www.youtube.com/@universityofbatangas1946"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <a target="_blank" href="https://www.instagram.com/ubatangas/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a target="_blank" href="https://www.linkedin.com/school/ubatangas/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+    </div>
+  </body>
+  <!--Footer starts-->
+  <footer>
+    <div class="footerLeft">
+      <up>
+        <h2 class="footerTitle">SMARTS</h2>
+        <h5 class="footerDescr">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
+          saepe quod optio temporibus repellat sit eius vel facilis. Obcaecati
+          optio enim cumque facere veritatis sint? Alias voluptatum rerum
+          perspiciatis consequatur!
+        </h5>
+      </up>
+      <down>
+        <h5>Copyright © 2019</h5>
+        <h5>All Rights Reserved.</h5>
+      </down>
+    </div>
+    <div class="footerMid">
+      <h5 class="browse1"><a class="changeColor" href="index.html">Home</a></h5>
+      <h5 class="browse2"><a class="changeColor" href="#">About</a></h5>
+      <h5 class="browse3"><a class="changeColor" href="#">Contact</a></h5>
+      <h5 class="browse4">
+        <a class="changeColor" href="scholarship.html">Scholarship</a>
+      </h5>
+    </div>
+    <div class="footerRight">
+      <up>
+        <h5 class="footerContact1">
+          <i class="fa-solid fa-location-dot"></i> City, Philippines
+        </h5>
+        <h5 class="footerContact2">
+          <i class="fa-solid fa-envelope"></i> temporary@gmail.com
+        </h5>
+      </up>
+      <down>
+        <h3 class="footerLink1">
+          <a class="changeColor2" target="_blank" href=""
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+        </h3>
+        <h3 class="footerLink2">
+          <a><i class="fa-brands fa-instagram"></i></a>
+        </h3>
+        <h3 class="footerLink3">
+          <a><i class="fa-brands fa-x-twitter"></i></a>
+        </h3>
+        <h3 class="footerLink4">
+          <a class="changeColor2" href=""
+            ><i class="fa-regular fa-envelope"></i
+          ></a>
+        </h3>
+      </down>
+    </div>
+  </footer>
+</html>

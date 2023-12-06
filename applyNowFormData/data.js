@@ -1,0 +1,1 @@
+export let ScholarApplications = JSON.parse(localStorage.getItem("ScholarApplications")) || [];
